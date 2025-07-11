@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #5761B2, #1FC5A8);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Weather-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  max-width: 400px;
+  width: 90%;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.Weather-container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #151B54;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #fff;
+  color: #151B54;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #dceeff;
+}
+
+.weather-info {
+  margin-top: 20px;
+  background: linear-gradient(to bottom right, #151B54, #123456);
+  
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  color: #fff;
+  animation: slideUp 0.6s ease forwards;
+}
+
+.weather-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1); /* translucent background */
+  backdrop-filter: blur(10px);          /* glass effect */
+  -webkit-backdrop-filter: blur(10px);  /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
